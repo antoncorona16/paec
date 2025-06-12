@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poetsen+One&family=Press+Start+2P&display=swap&family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+  <title>Juego: Contrae las latas</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-image: url('../media/fondito.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    h1 {
+      margin-top: 36px;
+      color: #7fc3ff;
+      text-shadow: 1px 1px 3px #000;
+      font-family: "Press Start 2P", system-ui;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    #juego {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      height: 500px;
+      margin: 0 auto;
+      border: 2px solid #ccc;
+      background-color: rgba(255, 255, 255, 0.6);
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .olla {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 250px;
+      height: 160px;
+      background-image: url('../media/olla.gif');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      z-index: 1;
+    }
+
+    .lata {
+      width: 80px;
+      height: 120px;
+      background-image: url('../media/lata.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      top: 20px;
+      cursor: grab;
+      transition: transform 0.3s;
+      z-index: 2;
+    }
+
+    .lata.contraida {
+      background-image: url('../media/latados.png');
+      width: 60px;
+      height: 80px;
+      transform: scale(1);
+      pointer-events: none;
+    }
+
+    #puntaje, #tiempo {
+      font-size: 1.7em;
+      margin: 10px;
+      color: #b2ceff;
+      text-shadow: 1px 1px 2px #000;
+      font-family: "Turret Road", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    #reiniciarBtn {
+      display: none;
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      background-color: #3fa9f5;
+      border: none;
+      border-radius: 5px;
+      color: white;
+    }
+
+    #resultadoFinal {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.5em;
+      color: white;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    #barraTiempo {
+      width: 80%;
+      height: 20px;
+      background-color: #ddd;
+      margin: 0 auto 10px auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    #progreso {
+      height: 100%;
+      width: 100%;
+      background-color: #3fa9f5;
+      transition: width 1s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Contrae las latas en 60 segundos</h1>
+  <div id="puntaje">Latas contraídas: 0</div>
+  <div id="tiempo">Tiempo restante: 60s</div>
+  <div id="barraTiempo"><div id="progreso"></div></div>
+  <button id="reiniciarBtn" onclick="location.reload()">🔄 Reiniciar juego</button>
+  <div id="resultadoFinal"></div>
+
+  <div id="juego">
+    <div class="olla" id="olla"></div>
+  </div>
+
+  <audio id="sonidoExito" src="../media/exito.mp3"></audio>
+
+  <script>
+    const juego = document.getElementById("juego");
+    const puntajeDisplay = document.getElementById("puntaje");
+    const tiempoDisplay = document.getElementById("tiempo");
+    const olla = document.getElementById("olla");
+    const sonidoExito = document.getElementById("sonidoExito");
+    const resultadoFinal = document.getElementById("resultadoFinal");
+    const reiniciarBtn = document.getElementById("reiniciarBtn");
+    const progreso = document.getElementById("progreso");
+
+    let puntaje = 0;
+    let tiempo = 60;
+    let intervalo;
+    const totalLatas = 10;
+
+    for (let i = 0; i < totalLatas; i++) {
+      const lata = document.createElement("div");
+      lata.classList.add("lata");
+      lata.draggable = true;
+      lata.style.left = `${Math.random() * 660 + 40}px`;
+      lata.style.top = `${Math.random() * 250 + 40}px`;
+      lata.id = "lata" + i;
+
+      lata.addEventListener("dragstart", e => {
+        e.dataTransfer.setData("text/plain", lata.id);
+      });
+
+      juego.appendChild(lata);
+    }
+
+    olla.addEventListener("dragover", e => e.preventDefault());
+
+    olla.addEventListener("drop", e => {
+      e.preventDefault();
+      const lataId = e.dataTransfer.getData("text/plain");
+      const lata = document.getElementById(lataId);
+
+      if (!lata.classList.contains("contraida")) {
+        lata.classList.add("contraida");
+        puntaje++;
+        puntajeDisplay.textContent = `Latas contraídas: ${puntaje}`;
+
+        if (puntaje === totalLatas) {
+          terminarJuego("🎉 ¡Perfecto! Contraíste todas las latas a tiempo.", true);
+        }
+      }
+    });
+
+    function iniciarTemporizador() {
+      intervalo = setInterval(() => {
+        tiempo--;
+        tiempoDisplay.textContent = `Tiempo restante: ${tiempo}s`;
+        progreso.style.width = `${(tiempo / 60) * 100}%`;
+
+        if (tiempo <= 0) {
+          clearInterval(intervalo);
+          terminarJuego(`🎉 Juego terminado. Latas contraídas: ${puntaje}`, false);
+        }
+      }, 1000);
+    }
+
+    function terminarJuego(mensaje, exitoFinal) {
+      clearInterval(intervalo);
+      tiempoDisplay.textContent = "¡Juego finalizado!";
+      resultadoFinal.textContent = mensaje;
+      resultadoFinal.style.display = "block";
+      reiniciarBtn.style.display = "inline-block";
+      progreso.style.width = "0%";
+      if (exitoFinal) sonidoExito.play();
+    }
+
+    iniciarTemporizador();
+  </script>
+</body>
+</html>

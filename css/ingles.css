@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-image: url('https://acdn-us.mitiendanube.com/stores/956/391/products/escola-de-ingles-doodle1-08edef15dbbe10917316550707058804-1024-1024.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #000; /* Color negro para mejor contraste */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Savate", sans-serif;
+    font-optical-sizing: auto;
+    font-size:37px;
+    font-style: normal;
+
+}
+
+.titulo {
+    width: 100%;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: rgba(221, 255, 234, 0.726);
+    box-sizing: border-box;
+}
+
+.contenedor-pdf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+}
+
+.contenedor-pdf iframe {
+  width: 1200px;
+  height: 600px;    /* ajusta la altura también */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
