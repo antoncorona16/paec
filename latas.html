@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Audiowide&family=Electrolize&family=Goldman:wght@400;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&family=Poetsen+One&family=Press+Start+2P&family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="latas.css" />
+  <title>Juego: Contrae las latas</title>
+</head>
+<body>
+
+  <h1>Contrae las latas en 60 segundos</h1>
+  <div id="puntaje">Latas contraídas: 0</div>
+  <div id="tiempo">Tiempo restante: 60s</div>
+  <div id="barraTiempo"><div id="progreso"></div></div>
+  <button id="reiniciarBtn" onclick="location.reload()">🔄 Reiniciar juego</button>
+  <div id="resultadoFinal"></div>
+
+  <div id="juego">
+    <div class="olla" id="olla"></div>
+  </div>
+
+  <audio id="sonidoExito" src="exito.mp3"></audio>
+
+  <a href="mate.html" class="boton-regreso">
+    Volver
+  </a>
+
+  <script src="latas.js"></script>
+</body>
+</html>

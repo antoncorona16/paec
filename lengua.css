@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://img.freepik.com/fotos-premium/monton-letras-gris_23-2147749436.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #000; /* Color negro para mejor contraste */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Handlee", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.titulo {
+    width: 100%;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: rgba(255, 235, 163, 0.708);
+    box-sizing: border-box;
+}
+
+.titulo h1 {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 700;
+  font-style: normal;
+  margin: 10px 0;
+  color: #d0b22d;
+  font-size: 72px;
+}
+
+.titulo h2{
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 1000;
+  font-style: normal;
+  margin: 10px 0;
+  color: #7b6405;
+  font-size: 40px;
+}
+
+.hoja-fondo {
+      width: 100%;
+      min-height: 100vh;
+      background-image: url('../media/hoja.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 60px 20px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+.contenido-hoja {
+      width: 100%;
+      max-width: 800px;
+      text-align: center;
+      color: #3f2405;
+    }
+
+    .contenido-hoja h1 {
+      font-size: 2.8em;
+      font-weight: bold;
+      color: #211006;
+      margin-bottom: 10px;
+    }
+
+    .contenido-hoja .autores {
+      font-family: 'Courier New', monospace;
+      font-size: 1em;
+      margin-bottom: 30px;
+    }
+
+    .contenido-hoja h2 {
+      font-size: 1.5em;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #322508;
+    }
+
+    .contenido-hoja p {
+      font-size: 1.1em;
+      line-height: 1.6em;
+      margin: 10px 0;
+      font-family: "Handlee", cursive;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 18px;
+      color:#3f2405;
+    }

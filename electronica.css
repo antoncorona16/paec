@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-image: url('https://cdn.pixabay.com/video/2022/11/26/140578-775389242_large.mp4');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #000; /* Color negro para mejor contraste */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Turret Road", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: justify;
+  font-size: 22px;
+}
+
+.titulo {
+  width: 100%;
+  text-align: center;
+  padding: 30px 20px;
+  background-color: rgba(6, 9, 95, 0.619);
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.titulo h1 {
+  margin: 10px 0;
+  color: #7cbef5;
+  font-size: 64px;
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2{
+  margin: 10px 0;
+  color: #e8edff;
+  font-size: 24px;
+  font-family: "Electrolize", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 28px;
+}
+
+#videoFondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.filtro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Cambia 0.4 por el nivel de opacidad deseado */
+  z-index: -1;
+}
+
+.info0 {
+  width: 90%;
+  max-width: 1150px;
+  background-color: rgba(19, 31, 62, 0.532);
+  color: #94b6ff;
+  margin: 30px 0;
+  padding: 30px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  font-family: "Turret Road", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: justify;
+  font-size: 22px;
+}
+
+.info1 {
+  width: 90%;
+  max-width: 1250px;
+  background-color: rgba(37, 68, 86, 0.532);
+  color: #94b6ff;
+  margin: 30px 0;
+  padding: 30px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 26px;
+  text-align: center;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.galeria img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgb(255, 255, 255);
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}

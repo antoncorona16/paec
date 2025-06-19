@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-image: url('Ciencias S..jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Alegreya SC", serif;
+    font-weight: 900;
+    font-size:36px;
+    font-style: normal;
+}
+
+.titulo {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(19, 96, 138, 0.614);
+    box-sizing: border-box;
+    color:rgb(165, 226, 255);
+    font-family: "Amarante", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+}
+
+.periodico-flotante 
+{
+  display: block;
+  margin: 30px auto;
+  width: 300px;
+  animation: flotar 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+  @keyframes flotar {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+
+.periodico-flotante:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.info3 {
+    width: 90%;
+    max-width: 1150px;
+    background-color: rgba(192, 224, 250, 0.388);
+    color: #160f42;
+    margin: 30px 0;
+    padding: 30px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.info4 {
+    width: 90%;
+    max-width: 1200px;
+    background-color: rgba(192, 224, 250, 0.388);
+    color: #081150;
+    margin: 30px 0;
+    padding: 30px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    font-family: "Ancizar Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.info5 {
+    width: 90%;
+    max-width: 1200px;
+    background-color: rgba(192, 224, 250, 0.388);
+    color: #130233;
+    margin: 30px 0;
+    padding: 30px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    font-family: "Amarante", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}

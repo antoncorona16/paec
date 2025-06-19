@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Audiowide&family=Electrolize&family=Goldman:wght@400;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Merienda:wght@300..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&family=Poetsen+One&family=Press+Start+2P&family=Turret+Road:wght@200;300;400;500;700;800&family=Zen+Dots&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="electronica.css" />
+        <link rel="stylesheet" href="menu.css" />
+    </head>
+
+    <body> 
+        <video autoplay muted loop id="videoFondo">
+            <source src="Electro-paec.mp4" type="video/mp4">
+        </video>
+    
+        <div class="filtro"></div>
+    
+        <section class="titulo">
+            <h1>Electrónica</h1>
+            <h2>Bote de basura Inteligente</h2>
+        </section>
+
+        <!-- Botón para abrir el menú -->
+        <div id="menu-btn" onclick="abrirMenu()">☰</div>
+
+        <!-- Menú lateral -->
+        <div id="menu-lateral" class="menu-lateral">
+            <a href="javascript:void(0)" class="cerrar" onclick="cerrarMenu()">×</a>
+            <a href="index.html">Inicio</a>
+            <a href="electronica.html">Electrónica</a>
+            <a href="fisica.html">Física</a>
+            <a href="ingles.html">Inglés</a>
+            <a href="lengua.html">Lengua Comunicación</a>
+            <a href="mate.html">Matemáticas</a>
+            <a href="sociales.html">Ciencias Sociales</a>
+            <a href="latas.html">Juego "Contrae Latas"</a>
+        </div>
+
+        <section class="info0">
+            <h2>Historia de los botes para la Basura:</h2>
+            <p>Antes de que existieran los botes de basura como los conocemos, la gente simplemente tiraba sus desechos en las calles, 
+                ríos o cualquier lugar cercano. Esto era común en la antigüedad y la Edad Media. Las ciudades eran insalubres y propensas 
+                a enfermedades debido a la acumulación de basura y residuos orgánicos.</p>
+            <p>La necesidad de gestionar los residuos se hizo más evidente a medida que las poblaciones urbanas crecían y las epidemias 
+                se propagaban. Los primeros intentos organizados de recolección de basura surgieron en ciudades europeas como París en 
+                el siglo XIV, donde se empezaron a implementar regulaciones para que los ciudadanos sacaran sus desechos en momentos 
+                específicos para ser recogidos. Sin embargo, no existía un "bote" como tal, sino que se amontonaban en puntos designados.</p>
+            <p>En 1884, Eugène Poubelle emitió un decreto que obligaba a los propietarios de edificios a proporcionar a sus inquilinos recipientes 
+                cerrados para depositar sus desechos. Estos recipientes debían tener tres compartimentos: uno para trapos y papeles, 
+                otro para loza, vidrio y conchas, y un tercero para residuos orgánicos. La gente de París rápidamente comenzó a llamar 
+                a estos recipientes "poubelles", en honor a su creador, un término que todavía se usa hoy en día en francés para 
+                referirse a la basura o el cubo de basura.</p>
+            <h2>Innovaciones y Estandarizaciones:</h2>
+            <p>A lo largo del siglo XX, los botes de basura evolucionaron en materiales, tamaños y diseños para adaptarse a las 
+                necesidades de las ciudades y los sistemas de recolección. Se estandarizaron los tamaños para facilitar el vaciado 
+                mecánico por parte de los camiones de basura.</p>
+            <h2>La Tecnología implementada:</h2>
+            <p>En las UAQs de Electrónica, los alumnos han implementado distintos prototipos de recipientes electrónicos para fomentar
+            el uso de estos dispositivos en todo el plantel y aumentar el número de estudiantes interesados en hacer algún cambio por
+            el lugar donde estudian.</portal> </p>
+        </section>
+    
+        <section class="info1">
+            <h2>Evidencia Fotográfica:</h2>
+
+            <div class="galeria">
+                <img src="bote1.jpg" alt="Evidencia 1">
+            </div>  
+        </section>
+    
+        <script src="menu.js"></script>
+    </body>
+</html>

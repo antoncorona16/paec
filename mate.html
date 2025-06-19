@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Audiowide&family=Electrolize&family=Goldman:wght@400;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&family=Poetsen+One&family=Press+Start+2P&family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">        
+        <link rel="stylesheet" href="mate.css" />
+        <link rel="stylesheet" href="menu.css" />
+    </head>
+
+    <body>
+        <div class="fondo-opaco"></div>
+        
+        <section class="titulo">
+            <h1>Pensamiento Matemático</h1>
+        </section>
+        
+        <!-- Botón para abrir el menú -->
+        <div id="menu-btn" onclick="abrirMenu()">☰</div>
+
+        <!-- Menú lateral -->
+        <div id="menu-lateral" class="menu-lateral">
+            <a href="javascript:void(0)" class="cerrar" onclick="cerrarMenu()">×</a>
+            <a href="index.html">Inicio</a>
+            <a href="electronica.html">Electrónica</a>
+            <a href="fisica.html">Física</a>
+            <a href="ingles.html">Inglés</a>
+            <a href="lengua.html">Lengua Comunicación</a>
+            <a href="mate.html">Matemáticas</a>
+            <a href="sociales.html">Ciencias Sociales</a>
+            <a href="latas.html">Juego "Contrae Latas"</a>
+        </div>
+
+        <section class="info1">
+            <h2>Especificaciones</h2>
+            <p>
+                1.	Análisis de resultado y reflexión de la encuesta aplicada a los alumnos.
+            </p>
+            <P>
+                2.	Colecta de latas (se hace énfasis en que no se trata de consumir bebidas en latas de aluminio, sino de 
+                recoger aquellas latas que se encuentran tiradas o bien la que ellos separan de la basura que se genera en su casa).
+            </P>
+            <P>
+                3.	Se realizará un informe, donde se den a conocer los resultados: kilos de latas, remuneración económica, 
+                propuestas para inversión de recursos de acuerdo a las necesidades que los alumnos detectan en las aulas de 
+                matemáticas.
+            </p>
+            <h2>¿Qué es una lata?</h2>
+            <p>La lata de conservas fue patentada en 1810 por Peter Durand, un inventor inglés. Como no estaba vinculado con la 
+               producción de alimentos Durand vendió su patente a Bryan Donkin y John Hall, estos iniciaron la fabricación 
+               comercial de enlatados alrededor de 1813 envasando alimentos para la Armada Británica. Fue así como se inventaron
+               las conocidas latas de aluminio.</p>
+            <h2>¿Qué tan dañinas son para el medio ambiente?</h2>
+            <p>La producción de este metal consume mucha energía, lo que puede contribuir a la emisión de gases de efecto 
+                invernadero y al cambio climático. Además, la extracción de bauxita, el mineral del cual se obtiene el aluminio, 
+                puede causar deforestación y pérdida de hábitat.</p>
+            <p>Otro impacto negativo del aluminio en el medio ambiente es su disposición final ya que puede tardar cientos de años en degradarse y liberar sustancias tóxicas al medio ambiente. 
+            Por esta razón es tan importance hacer reciclaje del aluminio, porque es una forma efectiva de reducir su impacto en 
+            el medio ambiente, ahorrar energía y mejorar la economía a través de fuentes de empleo.</p>   
+            <h2>¿Cómo podemos cambiar este daño al planeta?</h2>
+            <p>En el CBTIS 118, se organizó una colecta de latas de aluminio para fomentarles a los estudiantes en donde se deben
+                de desechar correctamente, como las pueden separar de una buena forma y el como reutilizarlas para no solo tirarlas.</p>
+            <p>Además de la colecta, se realizó un formulario para conocer si los alumnos de la escuela están enterados de como 
+                se clasifican los distintos tipos de basura en los botes correspondientes, si practican la separación de residuos, etc.
+            </p>
+            <p>En concreto, la recolección de latas en el plantel fue todo un exito, al obtener la suma de 1980 kg. de latas 
+                recojidas por la mayoria de los estudiantes.
+            </p>
+        </section>
+        
+        <section class="info2">
+            <h2>Evidencia Fotográfica</h2>
+
+            <div class="galeria">
+                <img src="recoleccion1.jpeg" alt="Evidencia 1">
+                <img src="recoleccion2.jpeg" alt="Evidencia 2">
+            </div>
+        </section>
+        
+        <section class="info3">
+            <h3>¡Hora de Experimentar!</h3>
+            <p>¿Quieres aprender más acerca de los cambios que puede sufrir una lata? ¡Da clic aquí!</p>
+            <a href="latas.html" class="boton-juego">
+                <img src="juego.png" alt="Icono juego" style="height: 250px; vertical-align: middle; margin-right: 8px;">
+                <br>🎮 Jugar “Contrae las latas”
+            </a>
+        </section>
+
+        <script src="menu.js"></script>
+    </body>
+</html>

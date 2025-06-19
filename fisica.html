@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Audiowide&family=Electrolize&family=Goldman:wght@400;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&family=Poetsen+One&family=Press+Start+2P&family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">        
+        <link rel="stylesheet" href="fisica.css" />
+        <link rel="stylesheet" href="menu.css" />
+    </head>
+
+    <body>
+        <div class="fondo-opaco"></div>
+
+        <section class="titulo">
+            <h1>Conservación de la Energía y sus Interacciones con la Materia</h1>
+            <h2>Experimentación</h2>
+        </section>
+    
+        <!-- Botón para abrir el menú -->
+        <div id="menu-btn" onclick="abrirMenu()">☰</div>
+
+        <!-- Menú lateral -->
+        <div id="menu-lateral" class="menu-lateral">
+            <a href="javascript:void(0)" class="cerrar" onclick="cerrarMenu()">×</a>
+            <a href="index.html">Inicio</a>
+            <a href="electronica.html">Electrónica</a>
+            <a href="fisica.html">Física</a>
+            <a href="ingles.html">Inglés</a>
+            <a href="lengua.html">Lengua Comunicación</a>
+            <a href="mate.html">Matemáticas</a>
+            <a href="sociales.html">Ciencias Sociales</a>
+            <a href="latas.html">Juego "Contrae Latas"</a>
+        </div>
+
+        <section class="info3">
+            <h2>¿Qué son los residuos sólidos?</h2>
+            <p>Los residuos sólidos son todos aquellos desechos en estado sólido o semi-sólido que resultan de las actividades humanas, 
+                como en hogares, escuelas, industrias, hospitales, comercios y espacios públicos. Comúnmente se les llama "basura", 
+                pero no todos los residuos son basura: muchos pueden reciclarse o reutilizarse.
+            </p>
+
+            <div class="galeria-residuos">
+                <img src="https://gtaambiental.com/wp-content/uploads/23-comida-papel-carton-plasticos-y-vidrio-son-ejemplos-de-residuos-solidos-urbanos-gta-ambiental-img.jpg" alt="Residuos solidos" title="Residuos Sólidos">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyoSy624gdJG2zI9Cl2p1m-BaP_wwKsLq0m4KoULGNyqhTmxFB5j59By8BL1wjmMZvcAs&usqp=CAU" alt="Residuos Solidos" title="Residuos Sólidos">
+            </div>
+
+            <h2>Tipos de residuos sólidos:</h2>
+            <p>1. Orgánicos: Son restos de origen biológico, como comida, cáscaras de frutas, hojas o restos de jardinería. Son 
+                biodegradables y pueden usarse para hacer composta.</p>
+            <p>2. Inorgánicos reciclables: Materiales como papel, cartón, vidrio, plástico y metales. No se descomponen fácilmente, 
+                pero pueden reciclarse.</p>
+            <p>3. Inorgánicos no reciclables: Aquellos que no se pueden reutilizar o reciclar fácilmente, como papel higiénico 
+                usado, colillas de cigarro o empaques sucios.</p>
+            <p>4. Peligrosos: Representan un riesgo para la salud o el medio ambiente, como pilas, medicamentos caducados, productos 
+                químicos, aceites usados y residuos hospitalarios.</p>
+
+            <div class="galeria-residuos">
+                <img src="https://cdn0.ecologiaverde.com/es/posts/7/3/5/que_son_los_residuos_solidos_y_como_se_clasifican_1537_600.jpg" alt="Residuos Solidos generales" title="Muestra de Residuos Sólidos de una industria">
+                <img src="https://acironline.mx/wp-content/uploads/2019/04/basurainorganica.jpg" alt="Residuos Organicos" title="Residuos Orgánicos, ejemplo">
+                <img src="https://irp.cdn-website.com/777d988b/dms3rep/multi/pl%C3%A1stico.jpeg" alt="Residuos Inorganicos" title="Residuos inorgánicos reciclables, ejemplo">
+                <img src="https://blog.laminasyaceros.com/hs-fs/hubfs/basura-inorganica.jpg?width=480&name=basura-inorganica.jpg" alt="Residuos inorganicos no reciclables"  title="Residuos inorgánicos no reciclables, ejemplo">
+                <img src="https://www.alberamedioambiente.com/wp-content/uploads/caracteristicas-residuos-peligrosos.webp" alt="Residuos Peligrosos">
+            </div>
+
+            <h2>Problemas causados por los residuos sólidos:</h2>
+            <p>1. Contaminación del suelo, agua y aire</p>
+            <p>2. Proliferación de plagas (moscas, ratas, cucarachas)</p>
+            <p>3. Malos olores y afectación a la salud</p>
+            <p>4. Obstrucción de drenajes y riesgo de inundaciones</p>
+            <p>5. Emisión de gases de efecto invernadero si se queman o se descomponen de forma incorrecta.</p>
+
+            <h2>¿Cómo podemos manejar mejor los residuos sólidos?</h2>
+            <p>El manejo adecuado de residuos sólidos se basa en las 3R:</p>
+            <p>a. Reducir: Generar menos residuos desde el origen (por ejemplo, evitar productos con exceso de envoltura).</p>
+            <p>b. Reutilizar: Dar un nuevo uso a los objetos antes de desecharlos.</p>
+            <p>c. Reciclar: Separar los residuos para que puedan transformarse en nuevos productos.</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kNYueqP89tI?si=n-kTrSfUjUgpIOjy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <h2>Solución para la problemática:</h2>
+            <p>Para poder solucionar de una mejor manera la problemática que se ha planteado, se propuso crear botes electrónicos que 
+                hagan que el momento de tirar basura no solo lo vean como desecharla y ya, si no que lo convierta en un momento mas 
+                divertido para que los alumnos se interesen mas por ver como funciona el bote colocando bien sus basuras en los lugares 
+                correspondientes</p>
+        </section>
+    
+        <section class="evidencias">
+            <h2>Evidencia Fotográfica</h2>
+
+            <div class="galeria">
+                <img src="bote1.jpg" alt="Evidencia 1">
+                <img src="bote2.jpg" alt="Evidencia 2">
+                <img src="bote3.jpg" alt="Evidencia 3">
+            </div>
+        </section>
+
+        <script src="menu.js"></script>
+    </body>
+</html>
