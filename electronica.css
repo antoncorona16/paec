@@ -127,3 +127,25 @@ h2{
   transform: scale(1.05);
   z-index: 1;
 }
+
+@keyframes rotarLento {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.bote-animado {
+  animation: rotarLento 3s infinite ease-in-out;
+  transform-origin: center; /* ajusta si el giro parece extraño */
+}
+
+.bote {
+  width: 80px; /* ajusta según el tamaño de tu GIF */
+  height: auto;
+}
