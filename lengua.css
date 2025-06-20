@@ -45,7 +45,7 @@ body {
 .hoja-fondo {
       width: 100%;
       min-height: 100vh;
-      background-image: url('../media/hoja.png');
+      background-image: url('hoja.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
